@@ -97,6 +97,7 @@ module.exports = {
       },
       boxShadow: {
         button: `0 0.25rem #4fd1c5`,
+        'button-secondary': `0 0.25rem #1a202c`,
       },
       transitionProperty: {
         inputs: 'background-color, color, border, border-color, fill, stroke, opacity, box-shadow',
