@@ -1,24 +1,19 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, Corners } from '../components'
 
 const Hero = () => {
-  const heroEl = useRef(null)
   const [animateBackground, setAnimateBackground] = useState(0)
   const [animateContent, setAnimateContent] = useState(0)
 
-  document.addEventListener('scroll', () => {
-    setAnimateBackground(window.pageYOffset * 0.01)
-
-    if (window.pageYOffset <= 1000) {
+  if (typeof window !== 'undefined') {
+    document.addEventListener('scroll', () => {
+      setAnimateBackground(window.pageYOffset * 0.01)
       setAnimateContent((window.pageYOffset - 300) * 0.01)
-    }
-
-    console.log(animateBackground, animateContent)
-    // console.log(heroEl.current)
-  })
+    })
+  }
 
   return (
-    <div ref={heroEl} className="relative flex items-center justify-center min-w-screen bg-gray-100" style={{ height: '2vh', minHeight: 2000 }}>
+    <div className="relative flex items-center justify-center min-w-screen" style={{ height: '2vh', minHeight: 2000 }}>
       <div className="fixed top-0 w-full h-screen gradient" style={{ transform: `scale(${1 + animateBackground / 10})`, opacity: 1 - animateBackground / 3 }}>
         <Corners />
       </div>
