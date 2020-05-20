@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { Hero, Layout, SEO } from '../components'
+import { Hero, Layout, SEO, Timeline } from '../components'
 
 const IndexPage = ({ data }) => {
   //descructure our pagedata as js objects so we can use them
@@ -16,6 +16,9 @@ const IndexPage = ({ data }) => {
         // image={'/images/seo/home.png'}
       />
       <Hero />
+      {/* <About /> */}
+      <Timeline />
+      {/* <Portfolio /> */}
     </Layout>
   )
 }
