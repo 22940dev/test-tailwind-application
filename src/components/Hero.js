@@ -4,12 +4,12 @@ import VisibilitySensor from 'react-visibility-sensor'
 
 const Corners = () => {
   return (
-    <div className="absolute w-full h-full flex flex-col justify-between p-12">
-      <div className="flex-0">
-        <div className="ml-auto mr-0 border-t-4 border-r-4 border-black" style={{ width: 60, height: 60 }}></div>
+    <div className="absolute w-full h-full flex flex-col justify-between p-6 md:p-12">
+      <div className="flex-0 flex">
+        <div className="inline-block ml-auto mr-0 border-t-4 border-r-4 p-6 md:p-8 border-black"></div>
       </div>
-      <div className="flex-0">
-        <div className="mr-auto  border-b-4 border-l-4 border-black" style={{ width: 60, height: 60 }}></div>
+      <div className="flex-0 flex">
+        <div className="inline-block mr-auto border-b-4 border-l-4 p-6 md:p-8 border-black"></div>
       </div>
     </div>
   )
@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
             <div className="fixed top-0 min-h-screen flex items-center text-center z-20">
               <div style={{ opacity: 1 - animateContent / 3, marginTop: -animateContent * 7, paddingBottom: animateContent * 7 }}>
-                <h1 className="text-5xl font-bold mb-2">Dan Spratling</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-2">Dan Spratling</h1>
                 <p className="text-xl mb-8">In love with creating amazing experiences</p>
                 <Link to="#about">See for yourself</Link>
               </div>
