@@ -31,6 +31,8 @@ module.exports = {
       full: '100 0 auto',
     },
     extend: {
+      inset: {
+        '1/2': '50%',
       },
       boxShadow: {
         button: `0 0.25rem #4fd1c5`,

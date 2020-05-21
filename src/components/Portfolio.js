@@ -21,15 +21,14 @@ const Portfolio = () => {
             {isVisible ? (
               <>
                 <div className="fixed top-0 w-full h-screen bg-black" style={{ opacity: animateBackground / 3 }}></div>
-                <div className="fixed top-0 min-h-screen w-full flex items-center text-center z-20">
+                <div className="fixed top-0 min-h-screen w-full flex items-center text-center z-20  p-6 md:p-12">
                   <div className="max-w-2xl mx-auto" style={{ opacity: animateBackground / 4 - 0.5 }}>
-                    <h1 className="text-4xl text-white font-bold mb-2">Having a good time?</h1>
+                    <h1 className="text-4xl text-white font-bold mb-2 leading-snug">But it's not over yet</h1>
                     <p className="text-xl text-gray-300 mb-8">
-                      Don't worry, there's plenty more for you to look at. I've got a portfolio site too, designed for freelancing (and blogging). Made to{' '}
-                      <strong>wow</strong>.
+                      I bet you want to see more. Luckily, I've got a portfolio site too, designed for freelancing (and blogging). Made to <strong>wow</strong>.
                     </p>
                     <Link to="https://danspratling.dev" secondary>
-                      Don't stop me now
+                      Take a look
                     </Link>
                   </div>
                 </div>

@@ -62,13 +62,13 @@ const events = [
 // }
 
 const TimelinePoint = ({ index, date, title, description }) => (
-  <div className={`relative flex justify-end ${index % 2 && 'md:justify-start'}`}>
-    <div className="absolute min-h-full bg-teal-400" style={{ left: '50%', transform: 'translate(-50%, 0)', width: 4 }}>
-      <span className="absolute rounded-full bg-teal-400" style={{ width: 16, height: 16, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-        <span className="absolute rounded-full bg-white" style={{ width: 8, height: 8, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
+  <div className={`relative flex justify-end ${index % 2 && 'md:justify-start'} px-6 md:px-12`}>
+    <div className="absolute min-h-full bg-teal-400 left-0 md:left-1/2 mx-12 md:mx-0" style={{ transform: 'translate(-50%, 0)', width: 4 }}>
+      <span className="absolute rounded-full bg-teal-400 top-1/2 left-1/2" style={{ width: 16, height: 16, transform: 'translate(-50%, -50%)' }}>
+        <span className="absolute rounded-full bg-white top-1/2 left-1/2" style={{ width: 8, height: 8, transform: 'translate(-50%, -50%)' }} />
       </span>
     </div>
-    <div className="w-2/3 md:w-5/12">
+    <div className="w-3/4 md:w-5/12">
       <p className={`block text-teal-400 uppercase ${index % 2 && 'md:text-right'}`}>{date}</p>
       <div className="p-6 mt-2 mb-6 rounded-md border border-gray-200 shadow-md -ml-2">
         <p className="text-xl mb-1">{title}</p>
