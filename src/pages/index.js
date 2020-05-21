@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { Hero, Layout, Portfolio, SEO, Timeline } from '../components'
+import { About, Hero, Layout, Portfolio, SEO, Timeline } from '../components'
 
 const IndexPage = ({ data }) => {
   //descructure our pagedata as js objects so we can use them
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
         // image={'/images/seo/home.png'}
       />
       <Hero />
-      {/* <About /> */}
+      <About image={data.file.childImageSharp} />
       <Timeline />
       <Portfolio />
     </Layout>
@@ -33,6 +33,13 @@ export const query = graphql`
           twitter
           github
           instagram
+        }
+      }
+    }
+    file(relativePath: { eq: "avatar.jpg" }) {
+      childImageSharp {
+        fixed(width: 400, height: 400) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
