@@ -33,6 +33,10 @@ Because of the fixed elements and structure of the page, it's not tabbable. This
 
 The consistency of some design elements could be improved, specifically between the timeline and the rest of the components. The timeline looks great in isolation but the cards don't fit with the design of the rest of the site.
 
+### Content
+
+As you'll see, all data is stored either directly in JSX, or as an object (when looping).
+
 ## Setup
 
 This is a Gatsby site because ... well I like Gatsby! As such, the normal way of setting up a Gatsby site carries over.
@@ -42,8 +46,8 @@ This is a Gatsby site because ... well I like Gatsby! As such, the normal way of
 yarn
 
 # dev server
-yarn develop
+gatsby develop
 
 # prod build
-yarn build && yarn serve
+gatsby build && gatsby serve
 ```
