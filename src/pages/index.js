@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { About, Hero, Layout, Portfolio, SEO, Timeline } from '../components'
+import { About, Hero, Layout, Portfolio, SEO, Social, Timeline } from '../components'
 
 const IndexPage = ({ data }) => {
   //descructure our pagedata as js objects so we can use them
@@ -16,9 +16,12 @@ const IndexPage = ({ data }) => {
         // image={'/images/seo/home.png'}
       />
       <Hero />
-      <About image={data.file.childImageSharp} />
+      <About />
       <Timeline />
       <Portfolio />
+      <div className="fixed bottom-0 left-0 w-full flex justify-center p-6 z-50">
+        <Social />
+      </div>
     </Layout>
   )
 }
@@ -29,18 +32,6 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        socials {
-          twitter
-          github
-          instagram
-        }
-      }
-    }
-    file(relativePath: { eq: "avatar.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
       }
     }
   }

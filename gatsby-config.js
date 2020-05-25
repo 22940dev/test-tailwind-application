@@ -11,7 +11,7 @@ module.exports = {
     author: `@dan_spratling`,
     socials: {
       twitter: `https://twitter.com/dan_spratling`,
-      github: `https://github.com/danspratling`,
+      github: `https://github.com/danspratling/tailwind-application`,
       instagram: `https://www.instagram.com/danspratling`,
     },
   },

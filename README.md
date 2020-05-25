@@ -1,107 +1,49 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Dan Spratling
+  Dan Spratling - Tailwind UI Application
 </h1>
 
-TODO:
+## About me
 
-- Analytics (https://usefathom.com/)
-- Docs
-- Uses (tech)
-- About (skillset)
-- Form design improvements
+Hi! I'm Dan Spratling. I'm a UI developer who's worked on many client projects across multiple industries. I love creating great experiences for others. I'm consistently learning and I try to give back to the community where I can. If you want to learn more about me, my (portfolio website)[https://danspratling.dev/] or (twitter account)[https://twitter.com/dan_spratling] give much better overview of who I am as a person than this rèsumè does.
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## This site
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+This site is a resume designed specifically for applying to Tailwind UI. As with all my projects, I took the opportunity to learn something new. The design is heavily inspired by apple's product page, with long pages with fixed animated page sections.
 
-## 🚀 Quick start
+## Improvements
 
-1.  **Create a Gatsby site.**
+This site is far from perfect. It was built quickly for the application and with a new design approach which means there are issues which should be resolved if this was to be used in a real-world website. I've listed a few of the problems I've noticed here.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+### Approach
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+A framework was probably not required here. A Gatsby site was used as a quick template to get started building the site, but this led me to 2 issues.
 
-1.  **Start developing.**
+1. A one-pager doesn't need a framework, or a simpler framework like alpine.js would be much better suited
+2. A framework here led me to use state for scroll animations which is _*not good*_
 
-    Navigate into your new site’s directory and start it up.
+### Performance
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+Using scroll and state to manage the animations of elements is a heavy handed approach, and with more complex animations (or older software) causes lag because of how much and how often the browser is forced to re-paint the window. Using requestAnimationFrame to manage the animation and debouncing scroll to reduce the number of state changes would definitely improve performance here (and possibly other better ways, I've got more to learn here).
 
-1.  **Open the source code and start editing!**
+### Accessibility
 
-    Your site is now running at `http://localhost:8000`!
+Because of the fixed elements and structure of the page, it's not tabbable. This isn't a problem for a small site like this, but I'd be unhappy releasing something with glaring issues like this in real life. All buttons and links should be able to be navigated to via tab.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+### Design
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+The consistency of some design elements could be improved, specifically between the timeline and the rest of the components. The timeline looks great in isolation but the cards don't fit with the design of the rest of the site.
 
-## 🧐 What's inside?
+## Setup
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+This is a Gatsby site because ... well I like Gatsby! As such, the normal way of setting up a Gatsby site carries over.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+```sh
+# setup
+yarn
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+# dev server
+yarn develop
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+# prod build
+yarn build && yarn serve
+```
